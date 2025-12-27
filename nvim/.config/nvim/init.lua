@@ -1,6 +1,9 @@
 -- Change the leader key to spacebar for easy use
 vim.g.mapleader = " "
 
+-- Set file explorer view to tree mode by default
+vim.g.netrw_liststyle = 3
+
 -- Enable syntax highlighting
 vim.cmd('syntax on')
 
@@ -27,7 +30,7 @@ vim.opt.softtabstop = 2
 vim.opt.termguicolors = true
 
 -- File Explorer
-vim.keymap.set('n', '<leader>e', ':Vex<CR>', { desc = 'File explorer' })
+vim.keymap.set('n', '<leader>e', ':Explore<CR>', { desc = 'File explorer' })
 
 -- Configure the theme (Optional: defaults to 'mocha')
 require("catppuccin").setup({
