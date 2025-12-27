@@ -7,7 +7,6 @@ The utilities include:
 * Neovim: My text editor
 * Starship: Decorating terminal prompts
 * Atuin: Commands history mananger
-* Github CLI (`gh`): Github CLI for better interaction with Github from terminal.
 
 ## How to use this repo
 
@@ -20,7 +19,7 @@ After installing `stow`, follow the below steps:
 2. Move into the `~/dotfiles` folder and run the following command to create symlinks to the dotfiles:
 
 ```bash
-stow zsh nvim starship atuin gh --adopt
+stow zsh nvim starship atuin  --adopt
 ```
 
 **NOTE**: The `--adopt` flag will pulls whatever current config you have in your environment and combine that with the config in this repo.
