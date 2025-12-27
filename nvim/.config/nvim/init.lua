@@ -1,3 +1,6 @@
+-- Change the leader key to spacebar for easy use
+vim.g.mapleader = " "
+
 -- Enable syntax highlighting
 vim.cmd('syntax on')
 
@@ -23,6 +26,9 @@ vim.opt.softtabstop = 2
 -- Enable true color support (required for Catppuccin)
 vim.opt.termguicolors = true
 
+-- File Explorer
+vim.keymap.set('n', '<leader>e', ':Vex<CR>', { desc = 'File explorer' })
+
 -- Configure the theme (Optional: defaults to 'mocha')
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -30,3 +36,4 @@ require("catppuccin").setup({
 
 -- Load the colorscheme
 vim.cmd.colorscheme "catppuccin"
+
