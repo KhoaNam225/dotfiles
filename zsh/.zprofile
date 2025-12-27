@@ -8,4 +8,5 @@ fi
 	
 
 alias lt="eza -l --tree --level 1 --icons=always --all"
+alias cdq="z"
 
