@@ -10,13 +10,6 @@ set -o vi
 
 eval "$(atuin init zsh)"
 
-# Eza config
-# if type brew &>/dev/null; then
-#    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-#     autoload -Uz compinit
-#     compinit
-# fi
-
 # Zoxide
 eval "$(zoxide init zsh)"
 
@@ -24,4 +17,7 @@ eval "$(zoxide init zsh)"
 FNM_PATH="/opt/homebrew/opt/fnm/bin"
 if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
+
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
