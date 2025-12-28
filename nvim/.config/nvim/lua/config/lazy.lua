@@ -33,7 +33,7 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.clangd" }, -- Covers C and C++
 		{ import = "lazyvim.plugins.extras.lang.json" },
 		{ import = "lazyvim.plugins.extras.lang.markdown" },
-
+		{ import = "lazyvim.plugins.extras.lang.docker" },
 		-- import your plugins
 		{ import = "plugins" },
 	},
