@@ -32,6 +32,24 @@ vim.opt.termguicolors = true
 -- File Explorer
 vim.keymap.set('n', '<leader>e', ':Explore<CR>', { desc = 'File explorer' })
 
+
+-- TERMINAL CONFIGURATION --
+-- Tab Management
+vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", { desc = "New Tab" })
+vim.keymap.set("n", "<leader>tc", ":tabclose<CR>", { desc = "Close Tab" })
+
+-- Cycle through tabs with Tab and Shift-Tab
+-- Note: This only works in Normal Mode
+vim.keymap.set("n", "<Tab>", ":tabnext<CR>", { silent = true })
+vim.keymap.set("n", "<S-Tab>", ":tabprev<CR>", { silent = true })
+
+-- Quick Terminal Tab
+-- Press Leader + tt to open a new tab and start a terminal immediately
+vim.keymap.set("n", "<leader>tt", ":tabnew | term<CR>a", { silent = true })
+
+-- Terminal escape: Press Esc to exit terminal mode and use Neovim motions
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
+
 -- Configure the theme (Optional: defaults to 'mocha')
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
