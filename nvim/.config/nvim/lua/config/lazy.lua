@@ -29,6 +29,10 @@ require("lazy").setup({
 
 		-- Python extras, which gives things like LSP, code suggestions
 		{ import = "lazyvim.plugins.extras.lang.python" },
+		{ import = "lazyvim.plugins.extras.lang.typescript" },
+		{ import = "lazyvim.plugins.extras.lang.clangd" }, -- Covers C and C++
+		{ import = "lazyvim.plugins.extras.lang.json" },
+		{ import = "lazyvim.plugins.extras.lang.markdown" },
 
 		-- import your plugins
 		{ import = "plugins" },
