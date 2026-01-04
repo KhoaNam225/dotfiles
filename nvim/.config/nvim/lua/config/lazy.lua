@@ -35,9 +35,6 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.markdown" },
 		{ import = "lazyvim.plugins.extras.lang.docker" },
 
-		-- community copilot
-		{ import = "lazyvim.plugins.extras.ai.copilot" },
-
 		-- import your plugins
 		{ import = "plugins" },
 	},
