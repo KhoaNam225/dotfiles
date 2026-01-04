@@ -1,6 +1,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/opt/nvim/"
 
+export EDITOR="nvim"
+
 # Starship
 eval "$(starship init zsh)"
 
