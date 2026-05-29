@@ -3,6 +3,13 @@ export PATH="$PATH:/opt/nvim/"
 
 export EDITOR="nvim"
 
+# Initialize Zsh Completions
+autoload -Uz compinit
+compinit -d ~/.cache/zcompdump
+
+# Initialize the fzf shell integrations
+source <(fzf --zsh)
+
 # Starship
 eval "$(starship init zsh)"
 
@@ -34,7 +41,7 @@ if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-if [[ "$OSTYPE" == "darwin"* ]]; then 
+if [[ "$OSTYPE" == "darwin"* ]]; then
     # 2. Check if the 'brew' command is available
     if command -v brew &> /dev/null; then
         eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -44,3 +51,5 @@ fi
 alias lt="eza -l --tree --level 1 --icons=always --all"
 alias cdq="z"
 
+# Sheldon
+eval "$(sheldon source)"
